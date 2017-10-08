@@ -1,0 +1,152 @@
+<html>
+<head>
+	<title>Emmet语法</title>
+</head>
+<body>
+	{# 后代 ul>li #}
+	<ul>
+		<li>后代</li>
+	</ul>
+
+	{# 兄弟 div+p #}
+	<div>1</div>
+	<p>1</p>
+
+    {# ^表示和上个是同级别的 div>span^p
+    有几个^就是向上走几个 #}
+    <div><span>1</span></div>
+    <p>1</p>
+
+    {# 分组 div>(div>p)>P 分组的不算器父类p#}
+    <div>
+    	<div>
+    		<p>1</p>
+    	</div>
+    	<p>1</p>
+    </div>
+
+    {# 使用多个 ul>li*5 #}
+    <ul>
+    	<li></li>
+    	<li></li>
+    	<li></li>
+    	<li></li>
+    	<li></li>
+    </ul>
+
+    {# 自动增加 $  ,*5表示数量    ul>li$*5 #}
+    <ul>
+    	<li1></li1>
+    	<li2></li2>
+    	<li3></li3>
+    </ul>
+
+    {# 使用自增符设置属性和内容
+    {}表示内容
+    []表示属性
+    $表自增符同时表示站位符，没有到达就用0替代
+    等号的右边表示是一个用“”括起的字符
+         h$[title=item$]{}
+         ul$$*5
+         #}
+         <h1 title="item1">header1</h1>
+         <h2 title="item2">header2</h2>
+         <h3 title="item3">header3</h3>
+
+         <ul01>1</ul01>
+         <ul02>1</ul02>
+         <ul03>2</ul03>
+         <ul04>2</ul04>
+         <ul05>1</ul05>
+
+         {# ul>li$@-*5
+           @- 从倒序位置开始
+           
+           
+           #}
+           <ul>
+           	<li5></li5>
+           	<li4></li4>
+           	<li3></li3>
+           	<li2></li2>
+           	<li1></li1>
+           </ul>
+
+         {# ul>li$@4*5 
+            @4表示从4开始
+            数5个,$表示自增模式
+
+            #}
+            <ul>
+            	<li4></li4>
+            	<li5></li5>
+            	<li6></li6>
+            	<li7></li7>
+            	<li8></li8>
+            </ul>
+
+
+         {# 直接使用属性   .title 
+         表示创建一个div其id为title
+         #}
+         <div class="title">ggh</div>
+
+         {# 可以指定 标签-默认的是div 
+             p.title#title
+             #}
+             <p class="tile" id="title"></p>
+
+             {# 自定义的属性 p[title="title"  spn=2] #}
+
+             <p tilte="title" spn="2"></p>
+
+             {# 文本  p{你好}#}
+             <p>你好</p>
+
+        {# 没有写子标签只用属性  
+           自动添加默认的子标签
+           没有就子标签为自己
+         ul>.op
+         div>.c
+         #}
+         <ul>
+         	<li class="op"></li>
+         </ul>
+
+
+         <div>
+         	<div class="c"></div>
+         </div>
+
+         {# A:B
+          B是A标签的默认属性配置
+          ,一般是常要配置的东西
+          或者是指定类型
+          link：css
+          script:src
+          input：password
+          #}
+          <link rel="stylesheet" href="style.css">
+          <script src=""></script>
+          <input type="password" name="" id="">
+          <input type="week" name="" id="f">
+          <input type="color" name="" id="ji"/>
+          <input type="number" name="" id="f">
+          <input type="month" name="" id="2">
+          <input type="time" name="" id="">
+          <input type="datetime" name="g" id="g">
+          <input type="date" name="" id="fa">
+          <input type="datetime-local" name="f" id="faf">
+          <input type="checkbox" name="f" id="">ffafa</input>
+          <input type="radio" name="faf" id="fa">
+          <input type="range" name="" id="">
+          <input type="image" src="" alt="xx">
+
+          <menu type="context">ff</menu>
+          <menu type="toolbar">ff</menu>
+          <video src="2.mp4" controls="controls"></video>
+          <object data="faf" type="">faf</object>
+
+          
+      </body>
+      </html>
